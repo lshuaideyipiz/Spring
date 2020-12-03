@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--scope指定bean的作用域，默认是单例(singleton)，这样就是容器里只有一个实例，每次获取的都是同一个对象
+        如果每次想要获取不同的实例，就设置为prototype
+        在web环境中，scope还有request和session等作用域，表示在请求和会话范围-->
+    <bean id="people" class="edu.nf.ch02.People" scope="prototype"/>
+</beans>

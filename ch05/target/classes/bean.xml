@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="userDao" class="edu.nf.ch05.dao.Impl.UserDaoImpl"/>
+    <bean id="userService" class="edu.nf.ch05.service.Impd.UserServiceImpl">
+        <!--给UserService注入提个UserDao
+            这个name指的是UserService里面的setUserDao方法，去电set并把首字母大写改为小写
+            ref指定为上面配置的UserDao的id-->
+        <property name="userDao" ref="userDao"/>
+    </bean>
+</beans>

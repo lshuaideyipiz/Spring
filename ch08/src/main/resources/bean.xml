@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--这个class返回的是一个实现类的实例-->
+    <bean id="userDao" class="edu.nf.ch08.factorybean.MapperFactoryBean">
+        <!--（依赖注入）MapperFactoryBean需要注入一个Dao接口的Class对象
+            注入的时候只需要给dao接口的完整类名，Spring会将其加载并创建Class-->
+        <property name="daoInterface" value="edu.nf.ch08.dao.UserDao"/>
+    </bean>
+    <bean id="userService" class="edu.nf.ch08.service.impl.UserServiceImpl">
+        <property name="userDao" ref="userDao"/>
+    </bean>
+</beans>

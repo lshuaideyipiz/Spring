@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="user" class="edu.nf.ch06.Users">
+        <!--ref是引用对象用的，基本数据类型用values-->
+        <!--<constructor-arg name="userName" value="user1"/>
+        <constructor-arg name="age" value="21"/>-->
+        <!--注入list集合-->
+        <!--<constructor-arg name="address">
+            <list>
+                <value>广州</value>
+                <value>珠海</value>
+            </list>
+        </constructor-arg>-->
+        <!--注入map集合-->
+        <!--<constructor-arg name="card">
+            <map>
+                &lt;!&ndash; 一个entry代表一个键值对 &ndash;&gt;
+                <entry key="工行" value="1231231321321"/>
+                <entry key="建行" value="1468484961545"/>
+            </map>
+        </constructor-arg>-->
+        <!--注入Properties对象-->
+        <!--<constructor-arg name="prop">
+            <props>
+                <prop key="aa">123456</prop>
+                <prop key="bb">456789</prop>
+            </props>
+        </constructor-arg>-->
+        <property name="userName" value="user2"/>
+        <property name="age" value="22"/>
+        <property name="address">
+            <list>
+                <value>广州</value>
+                <value>珠海</value>
+            </list>
+        </property>
+        <property name="card">
+            <map>
+                <entry key="a" value="123123123"/>
+                <entry key="b" value="456456456"/>
+            </map>
+        </property>
+        <property name="prop">
+            <props>
+                <prop key="aa">142145</prop>
+                <prop key="bb">256325</prop>
+            </props>
+        </property>
+    </bean>
+</beans>

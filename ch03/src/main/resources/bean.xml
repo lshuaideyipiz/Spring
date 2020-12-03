@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--name是别名，可以指定多个-->
+    <!--当没有指定id，只有name时，默认取name里的第一个作为id-->
+    <bean id="people" name="p1,p2,p3" class="edu.nf.ch03.People"/>
+</beans>

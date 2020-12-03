@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <!--配置Users类，将它纳入Spring容器中管理-->
+        <!--任何一个类都可以说成一个bean-->
+    <!--id是唯一标识,不可重复-->
+    <bean id="user" class="edu.nf.ch01.Users"/>
+    <bean id="people" class="edu.nf.ch01.People"/>
+
+    <!--配置自定义工厂，将这个工厂本身也纳入Spring容器中管理-->
+    <bean id="usersFactoryBean" class="edu.nf.ch01.factory.UsersFactoryBean"/>
+    <!--装配这个工厂，通过它来创建Users实例
+        factory-bean指定为上面配置这个工厂bean的id
+        factory—method指定为工厂类中的方法
+    -->
+    <bean id="user1" factory-bean="usersFactoryBean" factory-method="build"/>
+
+    <!--静态方法创建实例-->
+    <bean id="user2" class="edu.nf.ch01.factory.UsersFactory" factory-method="create"/>
+</beans>
