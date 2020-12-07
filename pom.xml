@@ -18,6 +18,9 @@
         <module>ch08</module>
         <module>ch08_1</module>
         <module>ch09</module>
+        <module>ch09_1</module>
+        <module>ch13</module>
+        <module>ch14</module>
     </modules>
     <packaging>pom</packaging>
 

@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import javax.annotation.Resource;
 
 /**
  * @author LZ
@@ -22,12 +23,20 @@ import javax.annotation.PreDestroy;
 //@Scope注解用于指定Bean的作用域，作用和xml中的一致
 @Scope("")
 public class UserController {
+
+    //@Resource也可以注入，只有一个实现类的时候直接用Resource，多个实现类的时候用name属性指定注入
+    //@Resource(name = "userService")
     private UserService userService;
 
     //主借用于完成注入配置，可以加在set和构造方法还有字段上
     //注意当实现类只有一个的时候，Spring会自动找到他并直接注入进来,
     // 如果有多个实现类的时候，就必须配合@Qualifier注解一起使用
     //@Qualifier作用就是指定注入哪一个实现类
+
+    /*当注入的实现类只有一个的时候，Spring会自动找到他并直接注入进来，
+     * 如果有多个的时候，先根据变量名作为id从容器中查找，如果匹配的到，就直接注入，
+     * 匹配不到就抛出有多个实现类的异常，再结合@Qualifier注解使用*/
+
     @Autowired
     @Qualifier("userServiceImpl")
     public void setUserService(UserService userService) {

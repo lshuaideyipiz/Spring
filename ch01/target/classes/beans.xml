@@ -15,4 +15,7 @@
         factory—method指定为工厂类中的方法
     -->
     <bean id="user1" factory-bean="usersFactoryBean" factory-method="build"/>
+
+    <!--静态方法创建实例-->
+    <bean id="user2" class="edu.nf.ch01.factory.UsersFactory" factory-method="create"/>
 </beans>

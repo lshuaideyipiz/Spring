@@ -7,4 +7,13 @@
     <bean id="users" class="edu.nf.ch04.Users" init-method="init" destroy-method="myDestroy"/>
     <!--配置BeanPostProcessor（BPP）-->
     <bean class="edu.nf.ch04.processor.MyPostProcessor"/>
+    <!--当配置了Bean的后处理器，生命周期如下
+        1.构造方法
+        2.后处理器的postProcessBeforeInitialization
+        3.InitializingBean的afterPropertiesSet
+        4.init-method
+        5.后处理器的postProcessAfterInitialization
+        6.DisposableBean的destroy
+        7.destroy-method
+    -->
 </beans>

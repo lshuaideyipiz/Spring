@@ -7,6 +7,12 @@
         <!--给UserService注入提个UserDao
             这个name指的是UserService里面的setUserDao方法，去电set并把首字母大写改为小写
             ref指定为上面配置的UserDao的id-->
-        <property name="userDao" ref="userDao"/>
+        <!--<property name="userDao" ref="userDao"/>-->
+        <!--通过构造方法注入,
+            name对应的是构造函数的参数名，ref是引用-->
+        <constructor-arg name="userDao" ref="userDao"/>
+        <!--多个参数的时候，也可以使用下标-->
+        <!--<constructor-arg index="0" ref="userDao"/>-->
+    <!--IOC容器就是一个工厂，用来完成bean之间的依赖关系-->
     </bean>
 </beans>
