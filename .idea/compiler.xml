@@ -14,15 +14,25 @@
         <module name="ch03" />
         <module name="ch02" />
         <module name="ch01" />
+        <module name="ch16" />
+        <module name="ch15" />
         <module name="ch14" />
         <module name="ch13" />
         <module name="ch12" />
         <module name="ch11" />
         <module name="ch10" />
+        <module name="ch21" />
+        <module name="ch20" />
         <module name="ch08_1" />
         <module name="ch09_1" />
+        <module name="ch17" />
+        <module name="ch18" />
+        <module name="ch19" />
         <module name="ch09" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ch" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
