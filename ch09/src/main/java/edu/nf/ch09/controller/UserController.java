@@ -21,7 +21,6 @@ import javax.annotation.Resource;
 //从3.0后开始，每个层都有对相应的注解来标识，作用和Component作用一样，这样标识起来更加直观知道是什么层
 @Controller("controller")
 //@Scope注解用于指定Bean的作用域，作用和xml中的一致
-@Scope("")
 public class UserController {
 
     //@Resource也可以注入，只有一个实现类的时候直接用Resource，多个实现类的时候用name属性指定注入

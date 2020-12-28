@@ -28,6 +28,8 @@
         <module>ch19</module>
         <module>ch20</module>
         <module>ch21</module>
+        <module>ch08_2</module>
+        <module>ch09_2</module>
     </modules>
     <packaging>pom</packaging>
 

@@ -2,11 +2,11 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-   <!-- <bean id="people" class="edu.nf.ch04.People" init-method="init" destroy-method="destroy"/>-->
-    <!--<bean id="users" class="edu.nf.ch04.Users" init-method="init"/>-->
+<!--    <bean id="people" class="edu.nf.ch04.People" init-method="init" destroy-method="destroy"/>-->
     <bean id="users" class="edu.nf.ch04.Users" init-method="init" destroy-method="myDestroy"/>
+<!--    <bean id="users" class="edu.nf.ch04.Users" init-method="init" destroy-method="myDestroy"/>-->
     <!--配置BeanPostProcessor（BPP）-->
-    <bean class="edu.nf.ch04.processor.MyPostProcessor"/>
+<!--    <bean class="edu.nf.ch04.processor.MyPostProcessor"/>-->
     <!--当配置了Bean的后处理器，生命周期如下
         1.构造方法
         2.后处理器的postProcessBeforeInitialization
